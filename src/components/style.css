@@ -1,0 +1,35 @@
+.outer{
+    margin-top: 100px;
+    display: inline-block;
+    padding: 40px 30px;
+}
+.logo{
+    margin-top: -100px;
+    display: inline-block;
+    padding: 30px 30px;
+    background-color: rgb(254, 195, 66);
+    border-radius: 50%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.button{
+    background-color: rgb(127, 127, 241);
+    font-size: medium;
+    padding: 5px;
+}
+.button:hover{
+    background-color: rgb(76, 76, 242);
+}
+input{
+    padding: 5px;
+}
+.link{
+    color: red;
+    cursor: pointer;
+}
+.page-header{
+    color:grey
+}

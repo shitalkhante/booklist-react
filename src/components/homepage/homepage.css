@@ -1,0 +1,44 @@
+.home-body{
+    height: 100vh;
+    background-color: rgb(21, 4, 58);
+    color: white;
+    padding: 20px 30px;
+}
+#logout{
+    float: right;
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: rgb(225, 175, 49);
+    font-size: medium;
+}
+
+#add-new{
+    margin-left: 25pc;
+    padding: 5px 10px;
+    background-color: rgb(225, 175, 49);
+    margin-bottom: 10px;
+}
+
+.books{
+    display: flex;
+    overflow: overlay;
+    gap: 20px;
+}
+.book{
+    border: 1px solid gray;
+    display: inline-block;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+p{
+    margin-block: 5px;
+}
+.author{
+    color: gray;
+}
+.title{
+    margin-block-end: 5px;
+    color: blue;
+}

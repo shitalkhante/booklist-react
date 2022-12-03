@@ -1,0 +1,27 @@
+.add-book-body{
+    padding: 20px 140px;
+    height: 100vh;
+    background-color: rgb(21, 4, 58);
+    color: white;
+    text-align: left;
+}
+.add-book-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#show-book{
+    color: rgb(225, 175, 49);
+    border: 1px solid rgb(225, 175, 49);
+    background: transparent;
+    padding: 5px 20px;
+}
+h1,h5{
+    text-align: center;
+}
+#add-book-submit{
+    color: rgb(225, 175, 49);
+    border: 1px solid rgb(225, 175, 49);
+    background: transparent;
+    padding: 5px 20px;
+}
