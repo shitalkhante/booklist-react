@@ -1,5 +1,5 @@
 import {useNavigate,useLocation} from "react-router-dom";
-import react, { useEffect, useState } from "react";
+import { useState } from "react";
 import "../bookrecord/bookrecord.css";
 import "./edit.css";
 import axios from "axios";
@@ -8,11 +8,10 @@ export const Edit =(props)=>{
     const navigate = useNavigate();
     const {state} = useLocation();
     const [data,setData] = useState(state);
-    console.log(data);
 
     const update =async()=>{
         
-           await axios.patch("http://localhost:8000/update",data,{headers:{"key":localStorage.getItem("token")}}).then(res=>{
+           await axios.patch("https://booklist-api-rr6z.onrender.com/update",data,{headers:{"key":localStorage.getItem("token")}}).then(res=>{
                 alert(res.data.result);
                 window.location.reload();
             }).catch(err=>{

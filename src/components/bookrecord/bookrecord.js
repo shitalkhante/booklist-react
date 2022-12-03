@@ -1,5 +1,4 @@
 import {useNavigate,useLocation} from "react-router-dom";
-import react, { useEffect } from "react";
 import "./bookrecord.css";
 import axios from "axios";
 
@@ -11,7 +10,7 @@ export const BookRecord =()=>{
     const delet =async()=> {
         console.log(localStorage.getItem("token"));
         console.log(state);
-        await axios.delete("http://localhost:8000/deletedata",state,{headers:{"key":localStorage.getItem("token")}}).then(res=>{
+        await axios.delete("https://booklist-api-rr6z.onrender.com/deletedata",state,{headers:{"key":localStorage.getItem("token")}}).then(res=>{
             alert(res.data.result);
         }).catch(err=>{
             console.log(err);

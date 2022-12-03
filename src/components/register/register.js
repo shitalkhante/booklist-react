@@ -1,6 +1,6 @@
 import "../style.css";
 import {useNavigate} from "react-router-dom";
-import react, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 export const Register =()=>{
@@ -8,9 +8,8 @@ export const Register =()=>{
     const navigate = useNavigate();
 
     const register =async()=>{
-        console.log(state.pass,state.email);
         if(state.pass===state.cpass){
-            await axios.post("http://localhost:8000/register",{email:state.email,pass:state.pass})
+            await axios.post("https://booklist-api-rr6z.onrender.com/register",{email:state.email,pass:state.pass})
             .then(result=>{
                 alert("Registered Successfully");
             }).catch(err=>{

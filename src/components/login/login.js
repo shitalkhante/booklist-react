@@ -1,6 +1,6 @@
 import "../style.css";
 import {useNavigate} from "react-router-dom";
-import react, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 export const Login =()=>{
@@ -8,8 +8,7 @@ export const Login =()=>{
     const navigate = useNavigate();
 
     const login=async()=>{
-        console.log(state.pass,state.email);
-            await axios.post("http://localhost:8000",{email:state.email,pass:state.pass})
+            await axios.post("https://booklist-api-rr6z.onrender.com",{email:state.email,pass:state.pass})
             .then(result=>{
                 if(result.data.token){
                     console.log(result);

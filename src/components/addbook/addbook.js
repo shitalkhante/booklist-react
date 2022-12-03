@@ -1,5 +1,5 @@
 import "./addbook.css";
-import react, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 
@@ -11,7 +11,7 @@ export const AddBook=()=>{
 
     const add =async()=>{
         if(state.title && state.ISBN && state.author && state.description && state.publish_by && state.publish_date){
-            axios.post("http://localhost:8000/addbook",state,{headers:{"key":localStorage.getItem("token")}}).then(res=>{
+            axios.post("https://booklist-api-rr6z.onrender.com/addbook",state,{headers:{"key":localStorage.getItem("token")}}).then(res=>{
                 alert(res.data.result);
             }).catch(err=>{
                 alert(err.data.error);
